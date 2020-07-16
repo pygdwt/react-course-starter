@@ -1,13 +1,16 @@
 * {
   box-sizing: border-box;
 }
-/* :root {
-  --clear-color: #f08080;
+:root {
+  --clear-color: #fa8072;
+  --add-color: #fa8072;
 }
-
 .clear-color {
   color: var(--clear-color);
-} */
+}
+.add-color {
+  color: var(--add-color);
+}
 
 html {
   font-size: 10px;
@@ -65,7 +68,6 @@ html {
 .btn-header {
   font-size: 1.8rem;
   font-family: "Fredericka the Great";
-  color: #fa8072;
 
   padding: 16px;
 
