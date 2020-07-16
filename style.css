@@ -42,6 +42,9 @@ html {
 .frame {
   border: 1px solid #484848;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -105,4 +108,29 @@ html {
   border: unset;
   background: unset;
   outline: unset;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "Balsamiq Sans";
+  font-size: 24px;
+  border-bottom: 1px solid #dcdcdc;
+  color: #d3d3d3;
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
