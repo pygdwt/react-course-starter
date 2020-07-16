@@ -10,31 +10,47 @@
       href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bungee&family=Fredericka+the+Great&family=Homemade+Apple&family=Pangolin&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <title>Static Template</title>
   </head>
   <body>
-    <div class="container">
-      <div class="frame">
-        <section class="header">
-          <button class="btn-header add-color">Add</button>
-          <h1 class="judul-header">ToDo List</h1>
-          <button class="btn-header clear-color">Clear</button>
-        </section>
-
-        <section class="add">
-          <form class="add-form">
-            <input type="text" class="add-input" />
-            <button class="add-btn">Add</button>
-          </form>
-        </section>
-
-        <section class="todos">
-          <div class="todo">
-            <span class="todo-text">Ngeteh Asu!</span>
+    <!-- WADAH KOMPONEN REACT -->
+    <div id="root"></div>
+    <script type="text/babel">
+      class App extends React.Component{
+        render(){
+          return(
+            <div class="container">
+          <div class="frame">
+            <!-- Header -->
+            <section class="header">
+              <button class="btn-header add-color">Add</button>
+                <h1 class="judul-header">ToDo List</h1>
+              <button class="btn-header clear-color">Clear</button>
+            </section>
+            <!-- Form -->
+            <section class="add">
+              <form class="add-form">
+                <input type="text" class="add-input" />
+                  <button class="add-btn">Add</button>
+              </form>
+            </section>
+            <!-- Todo List -->
+            <section class="todos">
+              <div class="todo">
+                <span class="todo-text">Sarapan</span>
+              </div>
+            </section>
           </div>
-        </section>
-      </div>
-    </div>
+        </div>
+          )
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
   </body>
 </html>
